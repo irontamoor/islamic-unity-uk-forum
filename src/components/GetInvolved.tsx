@@ -1,11 +1,10 @@
-
 import React from 'react';
-import { Hands, DollarSign, Calendar, Share2 } from 'lucide-react';
+import { Hand, DollarSign, Calendar, Share2 } from 'lucide-react';
 
 const GetInvolved = () => {
   const opportunities = [
     {
-      icon: Hands,
+      icon: Hand,
       title: "Volunteer",
       description: "Join our team of dedicated volunteers helping with food distribution, events, and community outreach.",
       action: "Sign Up to Volunteer",
