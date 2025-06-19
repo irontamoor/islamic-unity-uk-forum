@@ -42,7 +42,7 @@ const ComingSoon = () => {
               <Calendar className="w-8 h-8 text-amber-400 mr-3" />
               <span className="text-slate-300 text-lg font-medium">Expected Launch</span>
             </div>
-            <div className="text-3xl font-serif text-white mb-2">Spring 2025</div>
+            <div className="text-3xl font-serif text-white mb-2">Spring 2026</div>
             <p className="text-slate-400 text-sm">Stay tuned for updates</p>
           </div>
 
@@ -91,7 +91,7 @@ const ComingSoon = () => {
 
         {/* Footer */}
         <div className="text-center text-slate-400">
-          <p>&copy; 2024 UK Islamic Forum. All rights reserved.</p>
+          <p>&copy; 2026 UK Islamic Forum. All rights reserved.</p>
         </div>
       </div>
     </div>
