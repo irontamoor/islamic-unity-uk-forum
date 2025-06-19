@@ -38,7 +38,7 @@ const Contact = () => {
                     <p className="text-slate-300 leading-relaxed">
                        <br />
                       Nottingahm, UK<br />
-                      NG8 
+                      NG 
                     </p>
                   </div>
                 </div>
