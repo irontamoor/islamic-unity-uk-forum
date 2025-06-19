@@ -85,7 +85,7 @@ const ComingSoon = () => {
               <MapPin className="w-8 h-8 text-amber-400" />
             </div>
             <h4 className="text-white font-medium mb-2">Visit Us</h4>
-            <p className="text-slate-300">London, UK</p>
+            <p className="text-slate-300">Nottingham, UK</p>
           </div>
         </div>
 
