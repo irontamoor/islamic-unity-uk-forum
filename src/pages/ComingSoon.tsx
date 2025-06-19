@@ -77,7 +77,7 @@ const ComingSoon = () => {
               <Phone className="w-8 h-8 text-amber-400" />
             </div>
             <h4 className="text-white font-medium mb-2">Call Us</h4>
-            <p className="text-slate-300">+44 20 1234 5678</p>
+            <p className="text-slate-300">Coming Soon!</p>
           </div>
           
           <div className="text-center">
