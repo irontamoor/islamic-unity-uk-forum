@@ -36,9 +36,9 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-white mb-1">Our Address</h4>
                     <p className="text-slate-300 leading-relaxed">
-                      123 Community Street<br />
-                      London, UK<br />
-                      SW1A 1AA
+                       <br />
+                      Nottingahm, UK<br />
+                      NG8 
                     </p>
                   </div>
                 </div>
