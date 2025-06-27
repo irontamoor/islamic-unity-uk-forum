@@ -1,37 +1,17 @@
-
 import React from 'react';
 import { Calendar, ArrowRight, Users, Heart, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import newsData from '../data/news.json';
 
 const News = () => {
   const navigate = useNavigate();
 
-  const newsItems = [
-    {
-      date: "15 Dec 2024",
-      category: "Community Support",
-      title: "Winter Relief Campaign Helps 200+ Families",
-      excerpt: "Our annual winter relief campaign has successfully provided warm clothing, heating assistance, and food packages to over 200 families across the UK.",
-      icon: Heart,
-      featured: true
-    },
-    {
-      date: "10 Dec 2024",
-      category: "Education",
-      title: "New Islamic Studies Program Launches",
-      excerpt: "We're excited to announce our new comprehensive Islamic studies program for youth and adults, featuring renowned scholars and interactive learning.",
-      icon: BookOpen,
-      featured: false
-    },
-    {
-      date: "5 Dec 2024",
-      category: "Events",
-      title: "Annual Interfaith Dialogue Conference",
-      excerpt: "Join us for our upcoming interfaith conference bringing together leaders from different communities to discuss unity and understanding.",
-      icon: Users,
-      featured: false
-    }
-  ];
+  // Map icon strings to actual icon components
+  const iconMap = {
+    Heart,
+    BookOpen,
+    Users
+  };
 
   return (
     <section id="resources" className="py-20 bg-slate-900">
@@ -45,38 +25,42 @@ const News = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {newsItems.map((item, index) => (
-            <article key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-amber-400/50 transition-all duration-300 overflow-hidden ${item.featured ? 'lg:col-span-2 lg:row-span-1' : ''}`}>
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-slate-400" />
-                    <span className="text-sm text-slate-400">{item.date}</span>
+          {newsData.map((item, index) => {
+            const IconComponent = iconMap[item.icon as keyof typeof iconMap];
+            
+            return (
+              <article key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-amber-400/50 transition-all duration-300 overflow-hidden ${item.featured ? 'lg:col-span-2 lg:row-span-1' : ''}`}>
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-slate-400" />
+                      <span className="text-sm text-slate-400">{item.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <IconComponent className="w-5 h-5 text-amber-400" />
+                      <span className="text-sm font-medium text-amber-400">{item.category}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <item.icon className="w-5 h-5 text-amber-400" />
-                    <span className="text-sm font-medium text-amber-400">{item.category}</span>
-                  </div>
+                  
+                  <h3 className={`font-serif text-white mb-4 ${item.featured ? 'text-2xl' : 'text-xl'}`}>
+                    {item.title}
+                  </h3>
+                  
+                  <p className={`text-slate-300 leading-relaxed mb-6 ${item.featured ? 'text-lg' : ''}`}>
+                    {item.excerpt}
+                  </p>
+                  
+                  <button 
+                    onClick={() => navigate('/coming-soon')}
+                    className="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors duration-200"
+                  >
+                    Read More
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
                 </div>
-                
-                <h3 className={`font-serif text-white mb-4 ${item.featured ? 'text-2xl' : 'text-xl'}`}>
-                  {item.title}
-                </h3>
-                
-                <p className={`text-slate-300 leading-relaxed mb-6 ${item.featured ? 'text-lg' : ''}`}>
-                  {item.excerpt}
-                </p>
-                
-                <button 
-                  onClick={() => navigate('/coming-soon')}
-                  className="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors duration-200"
-                >
-                  Read More
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
 
         <div className="mt-12 text-center">

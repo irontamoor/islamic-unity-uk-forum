@@ -1,0 +1,27 @@
+
+[
+  {
+    "date": "15 Dec 2024",
+    "category": "Community Support",
+    "title": "Winter Relief Campaign Helps 200+ Families",
+    "excerpt": "Our annual winter relief campaign has successfully provided warm clothing, heating assistance, and food packages to over 200 families across the UK.",
+    "icon": "Heart",
+    "featured": true
+  },
+  {
+    "date": "10 Dec 2024",
+    "category": "Education",
+    "title": "New Islamic Studies Program Launches",
+    "excerpt": "We're excited to announce our new comprehensive Islamic studies program for youth and adults, featuring renowned scholars and interactive learning.",
+    "icon": "BookOpen",
+    "featured": false
+  },
+  {
+    "date": "5 Dec 2024",
+    "category": "Events",
+    "title": "Annual Interfaith Dialogue Conference",
+    "excerpt": "Join us for our upcoming interfaith conference bringing together leaders from different communities to discuss unity and understanding.",
+    "icon": "Users",
+    "featured": false
+  }
+]
