@@ -29,7 +29,7 @@ const News = () => {
             const IconComponent = iconMap[item.icon as keyof typeof iconMap];
             
             return (
-              <article key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-amber-400/50 transition-all duration-300 overflow-hidden ${item.featured ? 'lg:col-span-2 lg:row-span-1' : ''}`}>
+              <article key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-amber-400/50 transition-all duration-300 overflow-hidden">
                 <div className="p-8">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
@@ -42,11 +42,11 @@ const News = () => {
                     </div>
                   </div>
                   
-                  <h3 className={`font-serif text-white mb-4 ${item.featured ? 'text-2xl' : 'text-xl'}`}>
+                  <h3 className="font-serif text-white mb-4 text-xl">
                     {item.title}
                   </h3>
                   
-                  <p className={`text-slate-300 leading-relaxed mb-6 ${item.featured ? 'text-lg' : ''}`}>
+                  <p className="text-slate-300 leading-relaxed mb-6">
                     {item.excerpt}
                   </p>
                   
