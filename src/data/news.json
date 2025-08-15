@@ -1,12 +1,20 @@
 
 [
   {
+    "date": "5-6 Jul 2025",
+    "category": "Dawah",
+    "title": "An intensive course for the Modern Age",
+    "excerpt": "Join us for an intensive Dawah course for the modern age, taking place over Saturday & Sunday the 5th & 6th of July 2025, run by Br Hamza Tzortzis.",
+    "icon": "BookOpen",
+    "featured": true
+  },
+  {
     "date": "15 Dec 2024",
     "category": "Community Support",
     "title": "Winter Relief Campaign Helps 200+ Families",
     "excerpt": "Our annual winter relief campaign has successfully provided warm clothing, heating assistance, and food packages to over 200 families across the UK.",
     "icon": "Heart",
-    "featured": true
+    "featured": false
   },
   {
     "date": "10 Dec 2024",
